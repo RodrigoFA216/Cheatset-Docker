@@ -148,3 +148,36 @@ Delete dangling images
 
     docker image prune -A
 
+Delete all unused images
+
+    docker image prune -a
+
+Build an image from docker file
+
+    docker build DIRECTORY
+    //Example
+    docker build .
+
+Tag an image
+
+    docker tag IMAGE NEWIMAGE
+    //Examples
+    docker tag ubuntu ubuntu:18.04
+
+Build an tag an image from a dockerfile
+
+    docker build -t IMAGE DIRECTORY
+    //Example
+    docker build -t myimage .
+
+Save an image to a .tar file
+
+    docker save IMAGE > FILE
+    //Example
+    docker save ngnix > nginx.tar
+
+Load an image from a .tar file
+
+    docker load -i TARFILE
+    //Example
+    docker load -i nginx.tar
